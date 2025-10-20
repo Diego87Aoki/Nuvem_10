@@ -1,0 +1,153 @@
+---
+
+````markdown
+# 🧩 Postman e MongoDB Atlas – Pesquisa Completa
+
+## 1. Introdução
+A pesquisa tem como objetivo compreender para que servem o **Postman** e o **MongoDB Atlas**, como funcionam em conjunto e quais suas diferenças e semelhanças.  
+Baseada na Aula Prática **U3 RAP S2**, a atividade propôs o uso de serviços em nuvem para armazenamento, teste e análise de dados, utilizando o **Node.js** como intermediário entre o cliente e o banco de dados.
+
+---
+
+## 2. O que é o Postman
+O **Postman** é uma ferramenta de desenvolvimento e teste de **APIs (Application Programming Interfaces)**.  
+Ele permite enviar requisições HTTP (`GET`, `POST`, `PUT`, `DELETE`) e visualizar as respostas do servidor.
+
+### Usos principais:
+- Testar endpoints de APIs;
+- Simular o envio e recebimento de dados;
+- Validar o comportamento de sistemas;
+- Automatizar testes e gerar documentação.
+
+Na atividade, o Postman foi utilizado para testar a aplicação Node.js conectada ao MongoDB Atlas, verificando rotas como:
+- `GET /carros` → consulta todos os registros;
+- `POST /carros` → insere um novo carro;
+- `DELETE /carros/:id` → exclui um carro.
+
+---
+
+## 3. O que é o MongoDB Atlas
+O **MongoDB Atlas** é um banco de dados **NoSQL** orientado a documentos e oferecido como **serviço em nuvem (SaaS)**.  
+Ele armazena dados em formato **JSON** e permite alta flexibilidade e escalabilidade.
+
+### Usos principais:
+- Criar clusters de banco de dados na nuvem;
+- Armazenar dados enviados por APIs;
+- Consultar registros e visualizar estatísticas no painel “Collections”.
+
+---
+
+## 4. Tipos de Dados Manipulados
+
+### 4.1 MongoDB Atlas
+Trabalha com **dados não estruturados ou semi-estruturados**, aceitando diferentes formatos dentro da mesma coleção.
+
+**Exemplos:**
+```json
+"nome": "Diego Roberto"
+"endereco": {"rua": "Av. Brasil", "numero": 120}
+"email": "diego@example.com"
+"video": "https://youtube.com/video123"
+"dataCadastro": "2025-10-20"
+"preco": 11000
+"ativo": true
+````
+
+### 4.2 Postman
+
+O Postman trabalha com **dados estruturados**, geralmente em formato **JSON**, **XML** ou formulário HTTP.
+
+**Exemplo:**
+
+```json
+{
+  "fabricante": "Ford",
+  "modelo": "Ka",
+  "ano": 2010,
+  "preco": 11000
+}
+```
+
+---
+
+## 5. Relação entre Postman e MongoDB Atlas
+
+Essas ferramentas trabalham em conjunto em um fluxo integrado de desenvolvimento:
+
+| Etapa | Ferramenta            | Função                            |
+| ----- | --------------------- | --------------------------------- |
+| 1     | **Postman**           | Envia as requisições HTTP         |
+| 2     | **Node.js / Express** | Processa e conecta a API ao banco |
+| 3     | **MongoDB Atlas**     | Armazena e retorna os dados       |
+
+O Postman não acessa diretamente o banco, mas se comunica por meio da API que utiliza o **Mongoose** como intermediário.
+
+---
+
+## 6. Singularidades e Semelhanças
+
+| Ferramenta        | Singularidades                                                           |
+| ----------------- | ------------------------------------------------------------------------ |
+| **Postman**       | Testa APIs, automatiza requisições e gera documentação.                  |
+| **MongoDB Atlas** | Armazena dados em documentos JSON na nuvem e fornece painel de controle. |
+
+**Semelhanças:**
+
+* Ambas utilizam formato **JSON**;
+* Possuem versões gratuitas;
+* São acessíveis por interface gráfica;
+* Fazem parte do ciclo de desenvolvimento de APIs.
+
+---
+
+## 7. Comandos e Funcionalidades do Postman
+
+| Função                              | Descrição                                   | Exemplo                                 |
+| ----------------------------------- | ------------------------------------------- | --------------------------------------- |
+| **Noções básicas da API REST**      | Explica o funcionamento de requisições HTTP | Testar `GET` e `POST`                   |
+| **Noções básicas de testes de API** | Cria testes automatizados                   | Validar `GET /carros`                   |
+| **Documentação da API**             | Gera documentação automática                | Descrever rotas `/carros` e `/usuarios` |
+| **Teste de cenário de API**         | Simula fluxos de uso                        | Testar cadastro e consulta em sequência |
+| **Visualização de dados**           | Converte JSON em gráficos ou tabelas        | Exibir lista de carros                  |
+| **Métodos de autorização**          | Configura autenticação e tokens             | Utilizar Bearer Token                   |
+
+---
+
+## 8. Métodos HTTP Utilizados
+
+| Método     | Função                | Exemplo              |
+| ---------- | --------------------- | -------------------- |
+| **GET**    | Recupera dados        | `GET /carros`        |
+| **POST**   | Envia novos dados     | `POST /carros`       |
+| **PUT**    | Atualiza registros    | `PUT /carros/123`    |
+| **PATCH**  | Atualiza parcialmente | `PATCH /carros/123`  |
+| **DELETE** | Remove registros      | `DELETE /carros/123` |
+
+---
+
+## 9. Análise Comparativa
+
+| Ferramenta        | Tipo de Dado                      | Finalidade                  |
+| ----------------- | --------------------------------- | --------------------------- |
+| **Postman**       | Estruturado (requisições HTTP)    | Testar e validar APIs       |
+| **MongoDB Atlas** | Não estruturado (documentos JSON) | Armazenar e gerenciar dados |
+
+---
+
+## 10. Conclusão
+
+A integração entre **Postman** e **MongoDB Atlas** exemplifica o uso prático da **computação em nuvem** no desenvolvimento web moderno.
+O Postman possibilita o teste e a validação de APIs, enquanto o MongoDB Atlas oferece armazenamento flexível e escalável.
+Com o Node.js como intermediário, forma-se um ciclo completo de desenvolvimento, desde o envio de requisições até o armazenamento em nuvem.
+
+---
+
+## 11. Referências
+
+* Aula Prática U3 RAP S2 – Computação em Nuvem – Anhanguera Educacional (2025)
+* Postman – Documentação Oficial: [https://www.getpostman.com](https://www.getpostman.com)
+* MongoDB Atlas – Cloud Database Service: [https://www.mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas)
+
+```
+
+---
